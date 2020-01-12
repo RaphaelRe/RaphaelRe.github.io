@@ -11,7 +11,7 @@ body{
 	 font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 	 padding: 0;
 	 color: #555;
-	 overflow: hidden;
+	 overflow: auto; /*hidden*/
 }
 
 canvas {

@@ -78,6 +78,9 @@ img.avatar {
      margin-top: 1.2cm;
  }
 
+.top-half {
+     margin-top: 0.8cm;
+ }
 
 .scroll{
 	background-color: lightblue;

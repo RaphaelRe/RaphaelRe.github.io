@@ -1,17 +1,9 @@
-/* TODO:
-	hover effekt bei particle auch für den container machbar kriegen..
-	vermutlich über geeigneten z-index bei  particles-js, canvas container usw
-	Onhover: Icons einfärben
-	Verlinkung: Legal
-	Eigene Seite für Research(?)
-	*/
-
-body{
-	 margin: 0 auto;
-	 font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-	 padding: 0;
-	 color: #555;
-	 overflow: auto; /*hidden*/
+body {
+  margin: 0;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  padding: 0;
+  color: #555;
+  overflow: auto;
 }
 
 canvas {
@@ -19,182 +11,302 @@ canvas {
   vertical-align: bottom;
 }
 
-
- /* ---- particles.js container ---- */
+/* ---- particles.js container ---- */
 #particles-js {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #000000;
-  background-image: url(""); /*background.jpg*/
-  background-repeat: no-repeat;
+  background-color: #000;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: center;
   z-index: 0;
 }
 
 
-.myclass{	
-	margin-bottom: auto;
-	text-align: center;
-	position: fixed;
-	pointer-events: none;
-	left: 0;
-    right: 0;
-
-}
-
-.myclass h1{
-	font-size: 25px;
-	color: #a8a8a8;
-}
-
-.myclass h2{
-	font-weight: 300;
-    font-size: 30px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-	color: #f6ffe6;
-	font-size: 25px;
-	pointer-events: auto;
-
-}
-
-.myclass p{
-	color: #f6ffe6;
-	z-index: 1;
-	pointer-events: auto;
-	font-weight: 400;
-}
-
-
-
-img.avatar {
-	margin-top: 5%; 
-	border: 6px solid #ddd;
- 	border-radius: 4px;
-  	padding: 5px;
-	/*border-radius: 50%;*/
-}
-
-.top-one {
-     margin-top: 1.2cm;
- }
-
-.top-half {
-     margin-top: 27px;   /* 0.8cm;*/
- }
-
-.scroll{
-	background-color: lightblue;
-	overflow: scroll;
-}
-
-
-.white-box { width: 700px; height: 450px; margin-top: 50px; margin-left: auto; margin-right: auto;   
-	  
-	background: rgba(255,255,255,0.1);
-	padding: 30px;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
-	border-radius: 5px;
-	overflow-y: scroll;
-	overflow-x: scroll;
-	pointer-events: auto;
-}
-
-
-
-
-
-
-
-.sidenav {
-	  height: 100%;
-	  width: 160px;
-	  position: fixed;
-	  z-index: 1;
-	  top: 0;
-	  left: 0;
-	  background-color: rgba(255,255,255,0.1);
-	  overflow-x: hidden;
-	  padding-top: 20px;
-	  animation: fadeIn 3s;
-}
-
-.sidenav a {
-	  padding: 6px 8px 6px 16px;
-	  text-decoration: none;
-	  font-size: 25px;
-	  color: #818181;
-	  display: block;
-	  line-height: 2em;
-}
-
-.sidenav a:hover {
-          color: #f1f1f1;
-}
-
-
-
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-
-
-
-@media screen and (max-height: 450px) {
-	  .sidenav {padding-top: 15px;}
-          .sidenav a {font-size: 18px;}
-}
-
-
-
-
-
-
-
-footer {
+.myclass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center;    /* Center horizontally */
   position: fixed;
-  padding: 10px;
-  bottom: 0;
-  left: 0;
-  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none; /* Keep this if needed */
+}
+
+.myclass h2 {
+  font-size: 2rem;
+  color: #f6ffe6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  pointer-events: auto;
+}
+
+.myclass p {
+  color: #f6ffe6;
+  font-weight: 400;
+  font-size: 1.3rem;
+  pointer-events: auto;
+  margin: 10px 0;
+}
+
+
+/* General styling for the paragraph */
+.myclass p.no-wrap {
+  white-space: nowrap;  /* Prevent text wrapping */
+  font-size: 1.2rem;    /* Default size */
+  line-height: 1.5rem;
+}
+
+
+
+/* Adjust font size for smaller screens */
+@media screen and (max-width: 768px) {
+  .myclass p.no-wrap {
+    font-size: 1rem;    /* Slightly smaller font for tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .myclass p.no-wrap {
+    font-size: 0.85rem; /* Smaller font for mobile devices */
+  }
+}
+
+
+
+
+/* For text on other pages (not index) */
+.textclass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center;    /* Center horizontally */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none; /* Keep this if needed */
+}
+
+.textclass p {
+  color: #f6ffe6;
+  font-weight: 400;
+  font-size: 1.1rem;
+  pointer-events: auto;
+  margin: 10px 0;
+}
+
+.textclass h2 {
+  font-size: 1.8rem;
+  color: #f6ffe6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   pointer-events: auto;
 }
 
 
+.white-box {
+  width: 90%; max-width: 42em;
+  height: auto; max-height: 90vh;
+  margin: 2em auto;
+  /* margin-top: 2em; margin-bottom: 2em; margin-left: auto; margin-right: auto;    */
+	background: rgba(255,255,255,0.1);
+	padding: 2em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+	-webkit-border-radius: 1.5em;
+	-moz-border-radius: 1.5em;
+	-ms-border-radius: 1.5em; 
+	-o-border-radius: 1.5em; 
+	border-radius: 1.5em; 
+	/* overflow-y: scroll; */
+	/* overflow-x: scroll; */
+	overflow-y: auto;
+	overflow-x: auto;
+	pointer-events: auto;
+}
 
 
-a:link {
-  color: #555;
-  background-color: transparent;
-  text-decoration: none;
+
+@media screen and (max-width: 768px) {
+  .white-box {
+    width: 95%;             /* Slightly wider on tablets */
+    padding: 1.5em;         /* Reduce padding on smaller screens */
+    max-width: 35em;
+  }
 }
-a:visited {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
+
+
+
+
+
+img.avatar {
+  width: 10.5em;
+  height: auto;
+  border: 0.3em solid #ddd;
+  border-radius: 5%;
+  padding: 0.5em;
+  margin-top: 0.5em;
 }
-a:hover {
-  color: red;
-  background-color: transparent;
+
+.icon {
+  /* width: 40px; */
+  width: 3.5em;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-link {
+  margin-top: 20px;
+}
+
+.menu-link a {
+  color: #f6ffe6;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.menu-link a:hover {
+  color: #ff6347;
   text-decoration: underline;
 }
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
+
+footer {
+  font-size: 0.9em;
+  color: #f6ffe6;
+  margin-top: 0.5em;
+}
+
+/* ---- Responsive Styles ---- */
+@media screen and (max-width: 768px) {
+  .myclass {
+    width: 100%;
+  }
+
+  .myclass h2 {
+    font-size: 1.8rem;
+  }
+
+  .menu-link a {
+    font-size: 1rem;
+    margin: 10px 10px;
+  }
+
+  img.avatar {
+    width: 80px;
+  }
+
+  .icon {
+    width: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .myclass h2 {
+    font-size: 1.5rem;
+  }
+
+  .menu-link a {
+    font-size: 0.9rem;
+  }
+
+  img.avatar {
+    width: 60px;
+  }
+
+  .icon {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .myclass {
+    width: 100%;
+    padding: 1em; /* Add padding to prevent elements from touching screen edges */
+  }
+
+  .myclass h2 {
+    font-size: 1.6rem;
+  }
+
+  .myclass p {
+    font-size: 1.1rem; /* Reduce paragraph font size */
+  }
+
+  img.avatar {
+    width: 8em; /* Adjust avatar size */
+  }
+
+  .menu-link a {
+    font-size: 1.1rem; /* Adjust menu link size */
+  }
+
+  .icon {
+    width: 2.8em; /* Adjust icon size */
+  }
+
+  .white-box {
+    padding: 1.5em; /* Reduce padding */
+    width: 95%; /* Increase white box width */
+  }
+}
+@media screen and (max-width: 640px) {
+  .myclass h2 {
+    font-size: 1.4rem;
+  }
+
+  .myclass p {
+    font-size: 0.9rem;
+  }
+
+  .menu-link a {
+    font-size: 0.85rem;
+  }
+
+  img.avatar {
+    width: 5.5em;
+  }
+
+  .icon {
+    width: 2.5em;
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .myclass h2 {
+    font-size: 1.4rem;
+  }
+
+  .myclass p {
+    font-size: 0.9rem;
+  }
+
+  .menu-link a {
+    font-size: 1.0rem;
+  }
+
+  img.avatar {
+    width: 5.5em;
+  }
+
+  .icon {
+    width: 2.5em;
+  }
 }

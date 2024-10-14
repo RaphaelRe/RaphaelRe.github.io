@@ -109,12 +109,12 @@ canvas {
 
 
 .white-box {
-  width: 90%; max-width: 42em;
+  width: 90%; max-width: 52em;
   height: auto; max-height: 90vh;
-  margin: 2em auto;
+  margin: 0.5em auto;
   /* margin-top: 2em; margin-bottom: 2em; margin-left: auto; margin-right: auto;    */
 	background: rgba(255,255,255,0.1);
-	padding: 2em;
+	padding: 0.5em;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
@@ -141,6 +141,22 @@ canvas {
 }
 
 
+.white-box p {
+  color: #ebedbe;
+  font-weight: 400;
+  font-size: 1.2rem;
+  pointer-events: auto;
+  margin: 0.5rem 1.1rem 0 0;
+}
+
+.white-box h3 {
+  color: #fdff71;
+  font-weight: 400;
+  font-size: 1.3em;
+  pointer-events: auto;
+  margin: 1.0em 0.5em 1.0em 0.5em ;
+  text-align:center
+}
 
 
 
@@ -162,8 +178,21 @@ img.avatar {
 
 
 
+a:link{
+  color: #f6ffe6;
+  background-color: transparent;
+  text-decoration: underline;
+}
 
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
 
+.menu-link a:hover {
+  color: #ff6347;
+}
 
 
 
@@ -177,7 +206,7 @@ img.avatar {
 .menu-link a {
   color: #f6ffe6;
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-decoration: none;
   display: inline-block;
   margin: 10px 20px;
@@ -311,3 +340,29 @@ footer {
     width: 2.5em;
   }
 }
+
+
+.textclass2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Change from fixed to absolute */
+  width: 100%;
+  height: auto; /* Allow it to grow */
+  z-index: 1;
+  pointer-events: none;
+  overflow: auto;
+  top: 0;
+  bottom: 0; /* Ensure it takes the full height */
+}
+
+
+.textclass2 h2 {
+  font-size: 1.8rem;
+  color: #fdffce;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  pointer-events: auto;
+}
+

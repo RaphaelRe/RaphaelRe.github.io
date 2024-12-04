@@ -57,7 +57,7 @@ canvas {
 .myclass p.no-wrap {
   white-space: nowrap;  /* Prevent text wrapping */
   font-size: 1.2rem;    /* Default size */
-  line-height: 1.5rem;
+  line-height: 5.5rem;
 }
 
 

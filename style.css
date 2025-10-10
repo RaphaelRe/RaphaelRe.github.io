@@ -1,0 +1,402 @@
+body {
+  margin: 0;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  padding: 0;
+  color: #000;
+  overflow: auto;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+
+.myclass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center;    /* Center horizontally */
+	text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none; /* Keep this if needed */
+}
+
+.myclass h2 {
+  font-size: 2rem;
+  color: #f6ffe6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  pointer-events: auto;
+}
+
+.myclass p {
+  color: #f6ffe6;
+  font-weight: 400;
+  font-size: 1.3rem;
+  pointer-events: auto;
+  margin: 0.5rem 1.1rem 0 0;
+}
+
+
+/* General styling for the paragraph */
+.myclass p.no-wrap {
+  white-space: nowrap;  /* Prevent text wrapping */
+  font-size: 1.2rem;    /* Default size */
+  line-height: 5.5rem;
+}
+
+
+
+/* Adjust font size for smaller screens */
+@media screen and (max-width: 768px) {
+  .myclass p.no-wrap {
+    font-size: 1rem;    /* Slightly smaller font for tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .myclass p.no-wrap {
+    font-size: 0.8rem; /* Smaller font for mobile devices */
+  }
+}
+
+
+
+
+/* For text on other pages (not index) */
+.textclass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center;    /* Center horizontally */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none; /* Keep this if needed */
+}
+
+.textclass p {
+  color: #f6ffe6;
+  font-weight: 400;
+  font-size: 1.1rem;
+  pointer-events: auto;
+  margin: 10px 0;
+}
+
+.textclass h2 {
+  font-size: 1.8rem;
+  color: #f6ffe6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  pointer-events: auto;
+}
+
+
+.white-box {
+  width: 90%; 
+  max-width: 52em;
+  /* remove max-height entirely */
+  margin: 0.5em auto;
+  background: rgba(255,255,255,0.1);
+  padding: 0.5em;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  border-radius: 1.5em;
+  /* remove the overflow rules so boxes grow naturally */
+  pointer-events: auto;
+}
+
+/*.white-box {*/
+/*  width: 90%; max-width: 52em;*/
+/*  height: auto; max-height: 90vh;*/
+/*  margin: 0.5em auto;*/
+/*  /* margin-top: 2em; margin-bottom: 2em; margin-left: auto; margin-right: auto;    */*/
+/*	background: rgba(255,255,255,0.1);*/
+/*	padding: 0.5em;*/
+/*	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);*/
+/*	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);*/
+/*	box-shadow: 0 1px 2px rgba(0,0,0,0.15);*/
+/*	-webkit-border-radius: 1.5em;*/
+/*	-moz-border-radius: 1.5em;*/
+/*	-ms-border-radius: 1.5em; */
+/*	-o-border-radius: 1.5em; */
+/*	border-radius: 1.5em; */
+/*	/* overflow-y: scroll; */*/
+/*	/* overflow-x: scroll; */*/
+/*	overflow-y: auto;*/
+/*	overflow-x: auto;*/
+/*	pointer-events: auto;*/
+/*}*/
+
+
+
+@media screen and (max-width: 768px) {
+  .white-box {
+    width: 95%;             /* Slightly wider on tablets */
+    padding: 1.5em;         /* Reduce padding on smaller screens */
+    max-width: 35em;
+  }
+}
+
+
+.white-box p {
+  color: #ebedbe;
+  font-weight: 400;
+  font-size: 1.2rem;
+  pointer-events: auto;
+  margin: 0.9rem 1.1rem 0.9 0;
+}
+
+.white-box h3 {
+  /* color: #fdff71; */
+  color: #F5B027;
+  font-weight: 400;
+  font-size: 1.3em;
+  pointer-events: auto;
+  margin: 1.0em 0.5em 1.0em 0.5em ;
+  text-align:center;
+  font-weight: bold;
+}
+
+
+
+img.avatar {
+  width: 10.5em;
+  height: auto;
+  border: 0.3em solid #ddd;
+  border-radius: 5%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+}
+
+.icon {
+  width: 3.5em;
+  height: auto;
+}
+
+.icon-tum {
+  width: 3.5em;
+  height: auto;
+ /* vertical-align: -30px; */
+}
+
+
+
+
+
+a:link{
+  color: #f6ffe6;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.menu-link a:hover {
+  color: #ff6347;
+}
+
+
+
+
+
+
+.menu-link {
+  margin-top: 20px;
+}
+
+.menu-link a {
+  color: #f6ffe6;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.menu-link a:hover {
+  color: #ff6347;
+  text-decoration: underline;
+}
+
+footer {
+  font-size: 0.9em;
+  color: #f6ffe6;
+  margin-top: 0.5em;
+}
+
+/* ---- Responsive Styles ---- */
+@media screen and (max-width: 768px) {
+  .myclass {
+    width: 100%;
+  }
+
+  .myclass h2 {
+    font-size: 1.8rem;
+  }
+
+  .menu-link a {
+    font-size: 1rem;
+    margin: 10px 10px;
+  }
+
+  img.avatar {
+    width: 80px;
+  }
+
+  .icon {
+    width: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .myclass h2 {
+    font-size: 1.5rem;
+  }
+
+  .menu-link a {
+    font-size: 0.9rem;
+  }
+
+  img.avatar {
+    width: 60px;
+  }
+
+  .icon {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .myclass {
+    width: 100%;
+    padding: 1em; /* Add padding to prevent elements from touching screen edges */
+  }
+
+  .myclass h2 {
+    font-size: 1.6rem;
+  }
+
+  .myclass p {
+    font-size: 1.1rem; /* Reduce paragraph font size */
+  }
+
+  img.avatar {
+    width: 8em; /* Adjust avatar size */
+  }
+
+  .menu-link a {
+    font-size: 1.1rem; /* Adjust menu link size */
+  }
+
+  .icon {
+    width: 2.8em; /* Adjust icon size */
+  }
+
+  .white-box {
+    padding: 1.5em; /* Reduce padding */
+    width: 95%; /* Increase white box width */
+  }
+}
+@media screen and (max-width: 640px) {
+  .myclass h2 {
+    font-size: 1.4rem;
+  }
+
+  .myclass p {
+    font-size: 0.9rem;
+  }
+
+  .menu-link a {
+    font-size: 0.85rem;
+  }
+
+  img.avatar {
+    width: 5.5em;
+  }
+
+  .icon {
+    width: 2.5em;
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .myclass h2 {
+    font-size: 1.4rem;
+  }
+
+  .myclass p {
+    font-size: 0.9rem;
+  }
+
+  .menu-link a {
+    font-size: 1.0rem;
+  }
+
+  img.avatar {
+    width: 5.5em;
+  }
+
+  .icon {
+    width: 2.5em;
+  }
+}
+
+
+.textclass2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 2em 1em;
+  width: 100%;
+  z-index: 1;
+  color: #f6ffe6;
+  /*pointer-events: none;*/
+}
+
+/*.textclass2 {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  position: absolute; /* Change from fixed to absolute */*/
+/*  width: 100%;*/
+/*  height: auto; /* Allow it to grow */*/
+/*  z-index: 1;*/
+/*  pointer-events: none;*/
+/*  overflow: auto;*/
+/*  top: 0;*/
+/*  bottom: 0; /* Ensure it takes the full height */*/
+/*}*/
+
+
+.textclass2 h2 {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  pointer-events: auto;
+}
+

@@ -161,15 +161,17 @@ canvas {
 .white-box {
   width: 90%; 
   max-width: 52em;
-  /* remove max-height entirely */
   margin: 0.5em auto;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.09);
   padding: 0.5em;
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   border-radius: 1.5em;
-  /* remove the overflow rules so boxes grow naturally */
+  padding: 0.5em;
   pointer-events: auto;
+  transition: all .9s ease;
+  backdrop-filter: blur(10px);
 }
+
 
 /*.white-box {*/
 /*  width: 90%; max-width: 52em;*/
@@ -216,6 +218,13 @@ canvas {
   font-size: 1.2rem;
   pointer-events: auto;
   margin: 0.9rem 1.1rem 0.9 0;
+}
+.white-box hr {
+  color: #ebedbe;
+  font-weight: 400;
+  font-size: 1.2rem;
+  pointer-events: auto;
+  margin: 40px 100px 40px 100px
 }
 
 .white-box h3 {
@@ -584,7 +593,7 @@ footer {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all .9s ease;
   position: relative;
   overflow: hidden;
   min-height: 200px;

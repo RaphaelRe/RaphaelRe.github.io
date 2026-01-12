@@ -54,12 +54,14 @@ canvas {
   .sidenav {
     position: fixed;
     top: auto;
-    bottom: 60px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: row;
     gap: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
   }
   
   .sidenav a {
@@ -322,6 +324,24 @@ footer {
   backdrop-filter: blur(5px);
   z-index: 10;
 }
+
+
+@media screen and (max-width: 480px) {
+  footer {
+    font-size: 0.7em;
+    color: #f6ffe6;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0.5em;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+  }
+}
+
 
 /* ---- Responsive Styles ---- */
 @media screen and (max-width: 768px) {
@@ -760,7 +780,7 @@ footer {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   padding: 0.8em;
   text-align: center;
@@ -811,6 +831,7 @@ footer {
 @media screen and (max-width: 480px) {
   .back-button-container {
     padding: 0.5em;
+    z-index: -1;
   }
   
   .back-button-container h2 {

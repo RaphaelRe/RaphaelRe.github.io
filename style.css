@@ -853,3 +853,110 @@ footer {
   }
 }
 
+/* Typing Animation */
+.typing-container {
+  position: relative;
+  z-index: 10;
+  color: #f6ffe6;
+  font-size: 1.6rem;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  letter-spacing: 1px;
+  /* text-transform: uppercase; */
+  text-align: center;
+  min-height: 3rem;
+  pointer-events: auto;
+  margin: 1.8rem 0rem 0rem 0rem;
+}
+
+.typing-container .cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.5rem;
+  background-color: #f6ffe6;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+/* Final curser sets the opacity to max. Otherwise there is a jump in the text */
+.typing-container .cursor-final {
+  display: inline-block;
+  width: 8px;
+  height: 1.5rem;
+  background-color: rgba(0, 0, 0, 1);
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .typing-container {
+    font-size: 1.5rem;
+  }
+  
+  .typing-container .cursor {
+    height: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .typing-container {
+    font-size: 1.2rem;
+  }
+  
+  .typing-container .cursor {
+    height: 1.2rem;
+  }
+}
+
+
+/* second class for sub header */
+.typing-container-sub {
+  position: relative;
+  z-index: 10;
+  color: #f6ffe6;
+  font-size: 1.3rem;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  letter-spacing: 1px;
+  /* text-transform: uppercase; */
+  text-align: center;
+  min-height: 2rem;
+  pointer-events: auto;
+  margin: 1.5rem 0rem 2rem 0rem;
+}
+
+.typing-container-sub .cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.5rem;
+  background-color: #f6ffe6;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .typing-container-sub {
+    font-size: 1.2rem;
+  }
+  
+  .typing-container-sub .cursor {
+    height: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .typing-container-sub {
+    font-size: 1.0rem;
+  }
+  
+  .typing-container-sub .cursor {
+    height: 1.0rem;
+  }
+}

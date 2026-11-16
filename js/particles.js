@@ -14,7 +14,7 @@
   const ctx = canvas.getContext('2d');
 
   const CFG = {
-    density: 1 / 180000, // particles per px² of viewport
+    density: 1 / 300000, // particles per px² of viewport
     minCount: 10,
     maxCount: 40,
     linkDist: 450,      // max length of a link between two particles (px)

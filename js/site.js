@@ -50,6 +50,11 @@
     if (!storedTheme()) applyTheme(systemLight.matches);
   });
 
+  // The switch was used in another open tab of this site: follow it right away
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'theme' || e.key === null) applyTheme(preferredLight());
+  });
+
   // Pages restored with the back button keep their old state: re-apply
   window.addEventListener('pageshow', (e) => {
     if (e.persisted) applyTheme(preferredLight());
@@ -57,8 +62,8 @@
 
   applyTheme(isLight());
 
-  // Glow inside cards follows the cursor (see .glow in style.css)
-  for (const el of document.querySelectorAll('.glow')) {
+  // Glow inside cards follows the cursor (see .card::before in style.css)
+  for (const el of document.querySelectorAll('.card')) {
     el.addEventListener('pointermove', (e) => {
       const rect = el.getBoundingClientRect();
       el.style.setProperty('--mx', `${e.clientX - rect.left}px`);

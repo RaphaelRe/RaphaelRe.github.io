@@ -459,14 +459,14 @@ p.typed {
   line-height: 1.4;
 }
 
-/* Soft glow inside a card that follows the cursor (js/site.js sets --mx / --my).
-   Add class="glow" to any .card. */
-.glow {
+/* Soft glow inside every card that follows the cursor
+   (js/site.js sets --mx / --my) */
+.card {
   isolation: isolate; /* keeps the glow behind the card's text */
   transition: border-color 0.3s ease;
 }
 
-.glow::before {
+.card::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -482,13 +482,13 @@ p.typed {
   pointer-events: none;
 }
 
-.glow:hover,
-.glow:focus-visible {
+.card:hover,
+.card:focus-visible {
   border-color: rgba(var(--accent-rgb), 0.5);
 }
 
-.glow:hover::before,
-.glow:focus-visible::before {
+.card:hover::before,
+.card:focus-visible::before {
   opacity: 1;
 }
 

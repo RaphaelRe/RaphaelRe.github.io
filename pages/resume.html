@@ -1,128 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="height=device-height, initial-scale=1, user-scalable=yes">
-  <title>Resume</title>
-  <link href="../style.css" rel="stylesheet" type="text/css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume | Raphael Rehms</title>
+  <meta name="description" content="Resume of Raphael Rehms: education, experience and skills.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,6 88,28 88,72 50,94 12,72 12,28' fill='%23b19cd9'/%3E%3C/svg%3E">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t?t==='light':matchMedia('(prefers-color-scheme: light)').matches)document.documentElement.dataset.theme='light'})()</script>
+  <link href="../style.css" rel="stylesheet">
 </head>
+
 <body>
-  <div id="particles-js"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
 
-<div class="sidenav">
-   <a href="../index.html">Main</a>
-   <a href="about_me.html">About</a>
-   <a href="research.html">Research</a>
-   <a href="resume.html">Resume</a>
-</div>
+  <header class="topnav">
+    <a class="brand" href="../index.html" aria-label="Home">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 88,28 88,72 50,94 12,72 12,28"/></svg>
+      <span>Raphael Rehms</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="about_me.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="resume.html" aria-current="page">Resume</a>
+      <a href="teaching.html">Teaching</a>
+    </nav>
+    <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Light theme" title="Light / dark">
+      <span class="knob" aria-hidden="true">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5a8.5 8.5 0 1 0 10.6 10.6z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      </span>
+    </button>
+  </header>
 
-    <div class="textclass2">
-	    <h2>Resume</h2>	
+  <main class="page rise">
+    <h1 class="page-title">Resume</h1>
 
+    <section class="card">
+      <h2>Education</h2>
+      <ol class="timeline">
+        <li>
+          <span class="label">2019 &ndash; 2025</span>
+          <h3>Ph.D. (Dr. rer. nat.) at LMU Munich (Department of Statistics)</h3>
+          <ul>
+            <li>Uncertainty modeling in the context of infectious disease and complex uncertainty structures</li>
+            <li>Algorithmic methods in Bayesian inference</li>
+            <li>Development of custom software tools for Bayesian inference</li>
+          </ul>
+        </li>
+        <li>
+          <span class="label">2016 &ndash; 2019</span>
+          <h3>M.Sc. Statistics (Ludwig-Maximilians-University Munich)</h3>
+          <ul>
+            <li>Focus on Bayesian Modelling and Machine Learning</li>
+            <li>Final Grade: 1.36</li>
+          </ul>
+        </li>
+        <li>
+          <span class="label">2013 &ndash; 2016</span>
+          <h3>B.Sc. Economics (Ludwig-Maximilians-University Munich)</h3>
+          <ul>
+            <li>Focus on quantitative methods and econometrics</li>
+            <li>Final Grade: 1.98</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
 
-      <div class="white-box" id="style-1">
+    <section class="card">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li>
+          <span class="label">2025 &ndash; present</span>
+          <h3>Postdoctoral researcher at the Chair for AI in Healthcare and Medicine, TUM</h3>
+          <ul>
+            <li>Bayesian approaches and uncertainty quantification in the medical context</li>
+          </ul>
+        </li>
+        <li>
+          <span class="label">2024 &ndash; present</span>
+          <h3>Trainer (Freelancer) at Essential Data Science</h3>
+          <ul>
+            <li>Trainer for data science (theory and practice)</li>
+          </ul>
+        </li>
+        <li>
+          <span class="label">2019 &ndash; 2025</span>
+          <h3>Institute for Medical Information Processing, Biometry, and Epidemiology</h3>
+          <ul>
+            <li>Researcher and statistical consultant for clinicians</li>
+          </ul>
+        </li>
+        <li>
+          <span class="label">2018 &ndash; 2019</span>
+          <h3>Research assistant at Ludwig-Maximilians-University Munich</h3>
+          <ul>
+            <li>Tutorials for statistical courses</li>
+          </ul>
+        </li>
+        <li>
+          <span class="label">2016 &ndash; 2018</span>
+          <h3>Working student at Baader Bank AG</h3>
+          <ul>
+            <li>Data- and Riskmanagement</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
 
-	      <h3> Education  </h3>	
-        <p style="text-align:center;"><u>2019 - 2025</u></p>
-	      <p style="text-align:center;"> Ph.D Candidate at LMU Munich (Department of Statistics) </p>
+    <section class="card">
+      <h2>Skills</h2>
+      <div class="block">
+        <span class="label">Programming</span>
         <ul>
-          <li>Uncertainty modeling in the context of infectious disease and complex uncertainty structures</li>
-          <li>Algorithmic methods in Bayesian inference</li>
-          <li>Development of custom software tools for Bayesian inference</li>
-        </ul>
-
-	      <p> <hr> </p>
-
-        <p style="text-align:center;"><u>2016 - 2019</u></p>
-	      <p style="text-align:center;"> M.Sc. Statistics (Ludwig-Maximilians-University Munich) </p>
-        <ul>
-          <li>Focus on Bayesian Modelling and Machine Learning</li>
-          <li>Final Grade: 1.36</li>
-        </ul>
-
-	      <p> <hr> </p>
-
-        <p style="text-align:center;"><u>2013 - 2016</u></p>
-	      <p style="text-align:center;">  B.Sc. Economics (Ludwig-Maximilians-University Munich) </p>
-        <ul>
-          <li>Focus on quantitative methods and econometrics</li>
-          <li>Final Grade: 1.98</li>
-        </ul>
-        
-	      <p> <hr> </p>
-	      <p> <hr> </p>
-
-	      <h3> Experience  </h3>	
-        <p style="text-align:center;"><u>2024 - present</u></p>
-	      <p style="text-align:center;"> Trainer (Freelancer) at Essential Data Science </p>
-        <ul>
-          <li>Trainer for data science (theory and practice)</li>
-        </ul>
-
-	      <p> <hr> </p>
-
-        <p style="text-align:center;"><u>2019 - 2025</u></p>
-	      <p style="text-align:center;"> Institute for Medical Information Processing, Biometry, and Epidemiology </p>
-        <ul>
-          <li>Researcher and statistical consultant for clinicians</li>
-        </ul>
-
-	      <p> <hr> </p>
-
-        <p style="text-align:center;"><u>2016 - 2018</u></p>
-	      <p style="text-align:center;"> Working student at Baader Bank AG </p>
-        <ul>
-          <li>Data- and Riskmanagement</li>
-        </ul>
-
-	      <p> <hr> </p>
-
-        <p style="text-align:center;"><u>2018 - 2019</u></p>
-	      <p style="text-align:center;"> Research assistant at Ludwig-Maximilians-University Munich </p>
-        <ul>
-          <li>Tutorials for statistical courses</li>Riskmanagement</li>
-        </ul>
-
-	      <p> <hr> </p>
-	      <p> <hr> </p>
-
-
-
-	      <h3> Skills </h3>	
-        <p style="text-align:center;"><u>Programming</u></p>
-        <ul>
-          <li>Languages: Python, R, Matlab, C++(basic), Julia (basic), SQL (basic), VBA (basic)</li>
+          <li>Languages: Python, R, Matlab, C++ (basic), Julia (basic), SQL (basic), VBA (basic)</li>
           <li>Frameworks and libraries: Jax, Pyro, Stan, PyMC, Pytorch, Tensorflow, etc.</li>
         </ul>
-
-	      <p> <hr> </p>
-
-        <p style="text-align:center;"><u>Languages</u></p>
+      </div>
+      <div class="block">
+        <span class="label">Languages</span>
         <ul>
           <li>German, English, French (basic)</li>
         </ul>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer">Raphael Rehms &copy; 2026 &#8213; <a href="legal.html">Legal</a></footer>
 
-
-    </div>
-
-        <footer>Raphael Rehms &copy; 2024</footer>
-  
-        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-        <script>
-          particlesJS.load('particles-js', 'particles.json', function(){
-            console.log('particles.json loaded...');
-          });
-        </script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/site.js"></script>
 </body>
-
-<div class="back-button-container">
-    <h2><a href="../index.html">Go back</a></h2>
-</div>
-
-<script src="particles.js"></script>
-<script src="../config/app.js"></script>
 </html>
-

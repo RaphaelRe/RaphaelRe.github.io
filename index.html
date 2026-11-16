@@ -1,54 +1,61 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RaphaelRe</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <title>Raphael Rehms</title>
+  <meta name="description" content="Raphael Rehms, postdoc at the Chair for AI in Healthcare and Medicine, TUM. Bayesian methods and uncertainty quantification.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,6 88,28 88,72 50,94 12,72 12,28' fill='%23b19cd9'/%3E%3C/svg%3E">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t?t==='light':matchMedia('(prefers-color-scheme: light)').matches)document.documentElement.dataset.theme='light'})()</script>
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-  <div id="particles-js"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
 
-  <div class="myclass">
-    <img class="avatar" src="media/me.png" alt="Avatar">
-    <div id="typing-animation" class="typing-container"></div>
-    <div id="typing-animation2" class="typing-container-sub"></div>
-    <!-- <p class="no-wrap">&ensp;&ensp;Post-doc &ensp; &#8226; &ensp; TUM Munich</p> -->
-    <p class="top-one">
-      <a href="https://github.com/RaphaelRe" target="_blank">
-        <img src="media/git.png" alt="GitHub" class="icon" style="transform: translateX(8px)">
-      </a>
-      &ensp; &ensp;
-      <a href="https://www.kiinformatik.mri.tum.de/en/chair-artificial-intelligence-healthcare-and-medicine" target="_blank">
-        <!-- <img src="media/lmu.png" alt="LMU" class="icon"> -->
-        <img src="media/tum.gif" alt="LMU" class="icon" style="transform: translateY(-10px)">
-      </a>
-      &ensp; &ensp;
-      <a href="mailto:raphael.rehms[at]tum.de" target="_blank">
-        <img src="media/mail2.png" alt="Email" class="icon">
-      </a>
+  <button class="theme-toggle corner" type="button" role="switch" aria-checked="false" aria-label="Light theme" title="Light / dark">
+    <span class="knob" aria-hidden="true">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5a8.5 8.5 0 1 0 10.6 10.6z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+    </span>
+  </button>
+
+  <main class="hero">
+    <img class="avatar rise" src="media/me.jpg" alt="Image of me" width="192" height="192">
+
+    <h1 id="typed-title" class="typed rise" style="--i: 1">
+      <span class="sr-only">My name is Raphael</span>
+      <span class="typed-text" aria-hidden="true">My name is Raphael</span><span class="cursor" aria-hidden="true"></span>
+    </h1>
+    <p id="typed-sub" class="typed rise" style="--i: 1">
+      <span class="sr-only">I am a postdoc at TUM.</span>
+      <span class="typed-text" aria-hidden="true">I am a postdoc at TUM.</span><span class="cursor" aria-hidden="true"></span>
     </p>
 
-    <p class="menu-link"><a href="pages/about_me.html">About</a></p>
-    <p class="menu-link"><a href="pages/research.html">Research</a></p>
-    <p class="menu-link"><a href="pages/resume.html">Resume</a></p>
-    <p class="menu-link"><a href="pages/teaching.html">Teaching</a></p>
-  </div>
+    <nav class="menu rise" style="--i: 3" aria-label="Main">
+      <a href="pages/about_me.html">About</a>
+      <a href="pages/research.html">Research</a>
+      <a href="pages/resume.html">Resume</a>
+      <a href="pages/teaching.html">Teaching</a>
+    </nav>
+    <div class="social rise" style="--i: 2">
+      <a href="https://github.com/RaphaelRe" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+      <a href="https://aim-lab.io/" target="_blank" rel="noopener" aria-label="Chair for AI in Healthcare and Medicine, TUM" title="TUM">
+        <svg viewBox="0 0 73 38" aria-hidden="true"><path d="M28 0v31h8V0h37v38h-7V7h-8v31h-7V7h-8v31H21V7h-7v31H7V7H0V0h28z"/></svg>
+      </a>
+      <a href="#" data-mail-user="raphael.rehms" data-mail-domain="tum.de" aria-label="Email" title="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 3.3V17h16V8.3l-8 5.4-8-5.4zM5.2 7l6.8 4.6L18.8 7H5.2z"/></svg>
+      </a>
+    </div>
 
-  <!-- <div class="legal-bottom"> -->
-  <!--   <p class="menu-link"><a href="pages/legal.html" target="_blank" style="font-size: 0.9rem">Legal</a></p> -->
-  <!-- </div> -->
+  </main>
 
-  <!-- <footer>Raphael Rehms &copy; 2025 -- <a href="pages/legal.html" target="_blank" style="color: #B19CD9">Legal</a></footer> -->
-  <footer>Raphael Rehms &copy; 2026 &#8213; <a href="pages/legal.html" target="_blank">Legal</a></footer>
+  <footer class="footer">Raphael Rehms &copy; 2026 &#8213; <a href="pages/legal.html">Legal</a></footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS.load('particles-js', 'particles.json', function () {
-      console.log('particles.json loaded...');
-    });
-  </script>
+  <script src="js/particles.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/site.js"></script>
 </body>
-<script src="particles.js"></script>
-<script src="config/app.js"></script>
-<script src="typing-animation.js"></script>
+</html>

@@ -1,57 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes">
-    <title>Resume</title>
-    <link href="../style.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Raphael Rehms</title>
+  <meta name="description" content="About Raphael Rehms: researcher at the Chair for AI in Healthcare and Medicine, TUM.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,6 88,28 88,72 50,94 12,72 12,28' fill='%23b19cd9'/%3E%3C/svg%3E">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t?t==='light':matchMedia('(prefers-color-scheme: light)').matches)document.documentElement.dataset.theme='light'})()</script>
+  <link href="../style.css" rel="stylesheet">
 </head>
+
 <body>
-    <div id="particles-js"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
 
-    <div class="sidenav">
-        <a href="../index.html">Main</a>
-        <a href="about_me.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="resume.html">Resume</a>
+  <header class="topnav">
+    <a class="brand" href="../index.html" aria-label="Home">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 88,28 88,72 50,94 12,72 12,28"/></svg>
+      <span>Raphael Rehms</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="about_me.html" aria-current="page">About</a>
+      <a href="research.html">Research</a>
+      <a href="resume.html">Resume</a>
+      <a href="teaching.html">Teaching</a>
+    </nav>
+    <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Light theme" title="Light / dark">
+      <span class="knob" aria-hidden="true">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5a8.5 8.5 0 1 0 10.6 10.6z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      </span>
+    </button>
+  </header>
+
+  <main class="page rise">
+    <div class="intro">
+      <img class="avatar" src="../media/me.jpg" alt="Portrait of Raphael Rehms" width="120" height="120">
+      <div>
+        <h1 class="page-title">About me</h1>
+        <p class="lead">I am a postdoctoral researcher at the <b>Chair for AI in Healthcare and Medicine</b> (Daniel Rückert) at TUM. 
+            My work revolves around Bayesian approaches and uncertainty quantification in the medical context.</p>
+      </div>
     </div>
 
-    <div class="textclass2">
-        <h2>About me</h2> 
-
-        <div class="white-box" id="style-1">
-            <ul>
-                <li><p style="line-height:1.3em">I am a researcher at the <b>Chair for AI in Healthcare and Medicine</b> (Daniel Rückert), TUM.</p></li>
-            </ul>
-
-            <hr> <ul>
-                <li><p style="line-height:1.3em">Currently, I am interested in Bayesian approaches and uncertainty quantification in the medical context.</p></li>
-                <li><p style="line-height:1.3em">Specifically, this includes the usage of inference algorithms for Bayesian neural networks, handling uncertain data, sensible prior usage/definition and (soft-) inductive bias through a Bayesian lens (e.g. Prior-fitted-networks/tabular foundation models fuse a lot of theses topics.)</p></li>
-                <li><p style="line-height:1.3em">Given my background in economics, I also have some interest in (financial) econometrics and time series analysis. 
-                                                 For instance, I am interested in the efficient usage of sparse data in stock markets, leveraging Bayesian methods (ofc).</p></li>
-            </ul>
-
-            <hr> <ul>
-                <li><p style="line-height:1.3em">My PhD (Dr. rer. nat) is from LMU Munich, (<i>Department of Statistics</i>).</p></li>
-                <li><p style="line-height:1.3em">During that time, I worked as a researcher and data scientist at the <i>Institute for Medical Information Processing, Biometry, and Epidemiology</i>.</p></li>
-                <li><p style="line-height:1.3em">My past research focused primarily on Bayesian approaches to model uncertainty. I also worked on federated learning, specifically validation. 
-                                                 For more information, see the Research section. Alternatively, you may look in my thesis that summarizes many anspects of my past work.</p></li>
-            </ul>
-
-            <hr> </div>
-
-        <footer>Raphael Rehms &copy; 2026</footer>
+    <h2 class="section-title">What I am interested in</h2>
+    <div class="tiles">
+      <article class="card glow tile">
+        <span class="label">01</span>
+        <h3>Bayesian neural networks</h3>
+        <p>Inference algorithms for Bayesian neural networks, from sampling-based to variational approaches.</p>
+      </article>
+      <article class="card glow tile">
+        <span class="label">02</span>
+        <h3>Uncertain data</h3>
+        <p>Data that is uncertain itself: measurement error, noisy records, or sources that contradict each other.</p>
+      </article>
+      <article class="card glow tile">
+        <span class="label">03</span>
+        <h3>Priors and inductive bias</h3>
+        <p>Sensible definition and use of priors, and (soft) inductive bias through a Bayesian lens. Prior-fitted networks and tabular foundation models bring a lot of these topics together.</p>
+      </article>
+      <article class="card glow tile">
+        <span class="label">04</span>
+        <h3>Other topics</h3>
+        <p>My path left me with a huge interest in some other topics: differential privacy, federated learning, (financial) econometrics and time series. I am always happy to have a chat about theses topics! </p>
+      </article>
     </div>
 
-    <div class="back-button-container">
-        <h2><a href="../index.html">Go back</a></h2>
-    </div>
+    <h2 class="section-title">Background</h2>
+    <section class="card glow">
+      <p>I did my PhD (Dr. rer. nat.) at the <i>Department of Statistics</i> at LMU Munich. During that time, I worked as a researcher and data scientist at the <i>Institute for Medical Information Processing, Biometry, and Epidemiology</i>.</p>
+      <p>My research there focused on Bayesian approaches to model uncertainty, for example in infectious disease modelling and with complex measurement error. I also worked on federated learning, specifically on validating models without access to the data.</p>
+      <p>Many aspects of this work are summarized in my thesis, <a href="https://edoc.ub.uni-muenchen.de/35512/" target="_blank" rel="noopener"><i>Addressing uncertainty and complex data structures through Bayesian and classical approaches</i></a> (LMU, 2025).</p>
+      <a class="btn" href="research.html">Publications &rarr;</a>
+      <a class="btn" href="resume.html">Resume &rarr;</a>
+    </section>
+  </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS.load('particles-js', 'particles.json', function(){
-            console.log('particles.json loaded...');
-        });
-    </script>
-    <script src="particles.js"></script> <script src="../config/app.js"></script> </body>
+  <footer class="footer">Raphael Rehms &copy; 2026 &#8213; <a href="legal.html">Legal</a></footer>
+
+  <script src="../js/particles.js"></script>
+  <script src="../js/site.js"></script>
+</body>
 </html>

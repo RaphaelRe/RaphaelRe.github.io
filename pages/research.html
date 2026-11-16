@@ -1,296 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes">
-  <title>Research</title>
-  <link href="../style.css" rel="stylesheet" type="text/css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | Raphael Rehms</title>
+  <meta name="description" content="Selected publications of Raphael Rehms: Bayesian methods, uncertainty quantification and foundation models in medicine.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,6 88,28 88,72 50,94 12,72 12,28' fill='%23b19cd9'/%3E%3C/svg%3E">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t?t==='light':matchMedia('(prefers-color-scheme: light)').matches)document.documentElement.dataset.theme='light'})()</script>
+  <link href="../style.css" rel="stylesheet">
 </head>
+
 <body>
-  <div id="particles-js"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
 
-<div class="sidenav">
-  <a href="../index.html">Main</a>
-  <a href="about_me.html">About</a>
-  <a href="research.html">Research</a>
-  <a href="resume.html">Resume</a>
-</div>
+  <header class="topnav">
+    <a class="brand" href="../index.html" aria-label="Home">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 88,28 88,72 50,94 12,72 12,28"/></svg>
+      <span>Raphael Rehms</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="about_me.html">About</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="resume.html">Resume</a>
+      <a href="teaching.html">Teaching</a>
+    </nav>
+    <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Light theme" title="Light / dark">
+      <span class="knob" aria-hidden="true">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5a8.5 8.5 0 1 0 10.6 10.6z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      </span>
+    </button>
+  </header>
 
-    <div class="textclass2">
-	    <h2>Publications</h2>	
-
-      This is a list of selected publications where I made substantial contributions. 
+  <main class="page wide rise">
+    <h1 class="page-title">Publications</h1>
+    <p class="lead">
+      This is a list of selected publications where I made substantial contributions.
       For a complete list of publications, write me an email or ask the internet.
+    </p>
 
-      <div class="publications-grid">
-      
+    <!-- One <article> per publication: the visible part is the card,
+         the <template> is what the dialog shows on click. Newest first. -->
+    <div class="pubs">
 
-        <div class="publication-card" data-id="1">
-          <div class="card-preview">
-            <h3>Survival In-Context: Amortized PFNs for Survival</h3>
-            <p class="preview-text">Survival In-Context: Amortized Bayesian Survival Analysis via Prior-Fitted Networks</p>
-          </div>
-          <div class="card-content" style="display: none;">
-            <h3>Survival In-Context: Amortized Bayesian Survival Analysis via Prior-Fitted Networks</h3>
-            <p>- A Prior-Fitted (foundation) model for survival data</p>
-            <p>- Prior-Fitted Network atchitecture inspired by TabPFN and TabICL</p>
-            <p>- Prior-Fitted-Paradigms allow intellegent prior encoding that is challenging for survival data</p>
-            <p>- No additional learning on training data necesseray. Only context data</p>
-            <p>- Blazingly fast through amortized characteristics of PFNs</p>
-            <a href="https://arxiv.org/abs/2603.29475" target="_blank" class="external-link">View Paper</a>
-          </div>
-        </div>
+      <article class="card pub glow" tabindex="0" role="button" aria-haspopup="dialog">
+        <span class="label">2026 &middot; arXiv preprint</span>
+        <h2>NOAH: Learning the Full Patient Journey</h2>
+        <p>A longitudinal, multimodal, time-aware generative model for patient records</p>
+        <span class="label more">Details &rarr;</span>
+        <template>
+          <span class="label">2026 &middot; arXiv preprint</span>
+          <h2>NOAH: Learning the Full Patient Journey. A Longitudinal Multimodal Time-Aware Model for Representation and Forecasting</h2>
+          <ul>
+            <li>A task-agnostic generative transformer that represents and forecasts the full multimodal patient journey</li>
+            <li>Time-aware: a bidirectional time integration and a variational latent space capture the irregular dynamics and the stochasticity of clinical trajectories</li>
+            <li>Built from over 559 million clinical events of 299,000 patients across the MIMIC dataset family</li>
+            <li>Natively processes medical images, time series, numeric signals, categorical events and clinical text</li>
+            <li>One model for forecasting, zero-shot classification and counterfactual intervention simulation</li>
+          </ul>
+          <a href="https://arxiv.org/abs/2609.09140" target="_blank" rel="noopener" class="btn">View Paper</a>
+        </template>
+      </article>
 
-        <div class="publication-card" data-id="1">
-          <div class="card-preview">
-            <h3>It depends: Incorporating correlations for joint aleatoric and epistemic uncertainties...</h3>
-            <p class="preview-text">It depends: Incorporating correlations for joint aleatoric and epistemic uncertainties of high-dimensional output spaces</p>
-          </div>
-          <div class="card-content" style="display: none;">
-            <h3>It depends: Incorporating correlations for joint aleatoric and epistemic uncertainties of high-dimensional output spaces</h3>
-            <p>- A method that can account for epistemic and aleatoric uncertainty in high-dimensional output spaces, e.g. image inpainting or colorization</p>
-            <p>- Account for correlations within the output space, e.g. pixels may change values as a function of its neighbours</p>
-            <p>- Solution Double low-rank + diagonal formulation of Gaussian approximations for the output spaces</p>
-            <p>- Agnostic about the Bayesian approximation as long as one can generate samples from the posterior</p>
-            <a href="https://openreview.net/forum?id=zw5EuUnBny&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DTMLR%2FAuthors%23your-submissions)" target="_blank" class="external-link">View Paper</a>
-          </div>
-        </div>
+      <article class="card pub glow" tabindex="0" role="button" aria-haspopup="dialog">
+        <span class="label">2026 &middot; arXiv preprint</span>
+        <h2>Survival In-Context: Amortized PFNs for Survival</h2>
+        <p>Survival In-Context: Amortized Bayesian Survival Analysis via Prior-Fitted Networks</p>
+        <span class="label more">Details &rarr;</span>
+        <template>
+          <span class="label">2026 &middot; arXiv preprint</span>
+          <h2>Survival In-Context: Amortized Bayesian Survival Analysis via Prior-Fitted Networks</h2>
+          <ul>
+            <li>A Prior-Fitted (foundation) model for survival data</li>
+            <li>Prior-Fitted Network architecture inspired by TabPFN and TabICL</li>
+            <li>Prior-Fitted-Paradigms allow intelligent prior encoding that is challenging for survival data</li>
+            <li>No additional learning on training data necessary. Only context data</li>
+            <li>Blazingly fast through amortized characteristics of PFNs</li>
+          </ul>
+          <a href="https://arxiv.org/abs/2603.29475" target="_blank" rel="noopener" class="btn">View Paper</a>
+          <a href="https://github.com/yayapa/sic" target="_blank" rel="noopener" class="btn">Code</a>
+        </template>
+      </article>
 
+      <article class="card pub glow" tabindex="0" role="button" aria-haspopup="dialog">
+        <span class="label">2026 &middot; TMLR</span>
+        <h2>It depends: Incorporating correlations for joint aleatoric and epistemic uncertainties...</h2>
+        <p>Joint aleatoric and epistemic uncertainty for high-dimensional output spaces</p>
+        <span class="label more">Details &rarr;</span>
+        <template>
+          <span class="label">2026 &middot; Transactions on Machine Learning Research</span>
+          <h2>It depends: Incorporating correlations for joint aleatoric and epistemic uncertainties of high-dimensional output spaces</h2>
+          <ul>
+            <li>A method that can account for epistemic and aleatoric uncertainty in high-dimensional output spaces, e.g. image inpainting or colorization</li>
+            <li>Account for correlations within the output space, e.g. pixels may change values as a function of its neighbours</li>
+            <li>Solution: Double low-rank + diagonal formulation of Gaussian approximations for the output spaces</li>
+            <li>Agnostic about the Bayesian approximation as long as one can generate samples from the posterior</li>
+          </ul>
+          <a href="https://openreview.net/forum?id=zw5EuUnBny" target="_blank" rel="noopener" class="btn">View Paper</a>
+          <a href="https://arxiv.org/abs/2608.24518" target="_blank" rel="noopener" class="btn">arXiv</a>
+        </template>
+      </article>
 
+      <article class="card pub glow" tabindex="0" role="button" aria-haspopup="dialog">
+        <span class="label">2025 &middot; arXiv preprint</span>
+        <h2>Addressing complex structures of measurement error...</h2>
+        <p>Bayesian hierarchical approach for occupational epidemiology</p>
+        <span class="label more">Details &rarr;</span>
+        <template>
+          <span class="label">2025 &middot; arXiv preprint</span>
+          <h2>Addressing complex structures of measurement error arising in the exposure assessment in occupational epidemiology using a Bayesian hierarchical approach</h2>
+          <ul>
+            <li>Sometimes measurement errors are ridiculously complex.</li>
+            <li>You can use Bayesian ideas to do some magic and obtain unbiased results somehow.</li>
+            <li>Here: Correcting measurement errors in Survival models for data of the Wismut cohort.</li>
+            <li>Requires a lot of customization of a MCMC sampler with computational tricks.</li>
+          </ul>
+          <a href="https://arxiv.org/abs/2503.17161" target="_blank" rel="noopener" class="btn">View Paper</a>
+        </template>
+      </article>
 
-        <div class="publication-card" data-id="2">
-          <div class="card-preview">
-            <h3>Addressing complex structures of measurement error...</h3>
-            <p class="preview-text">Bayesian hierarchical approach for occupational epidemiology</p>
-          </div>
-          <div class="card-content" style="display: none;">
-            <h3>Addressing complex structures of measurement error arising in the exposure assessment in occupational epidemiology using a Bayesian hierarchical approach.</h3>
-            <p>- Sometimes measurement errors are rediculously complex.</p>
-            <p>- You can use Bayesian ideas to do some magic and obtain unbiased results somehow.</p>
-            <p>- Here: Correcting measurement errors in Survival models for data of the Wismut cohort.</p>
-            <p>- Requires a lot of customization of a MCMC sampler with computational tricks.</p>
-            <a href="https://arxiv.org/abs/2503.17161" target="_blank" class="external-link">View Paper</a>
-          </div>
-        </div>
+      <article class="card pub glow" tabindex="0" role="button" aria-haspopup="dialog">
+        <span class="label">2024 &middot; BMC Med Res Methodol</span>
+        <h2>Distributed non-disclosive validation of predictive models...</h2>
+        <p>Modified ROC-GLM for remote validation</p>
+        <span class="label more">Details &rarr;</span>
+        <template>
+          <span class="label">2024 &middot; BMC Medical Research Methodology</span>
+          <h2>Distributed non-disclosive validation of predictive models by a modified ROC-GLM</h2>
+          <ul>
+            <li>Validate your ML models on remote locations without looking at the data.</li>
+            <li>Utilizes SDC and Differential privacy to estimate ROC curves.</li>
+          </ul>
+          <a href="https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-024-02312-4" target="_blank" rel="noopener" class="btn">View Paper</a>
+        </template>
+      </article>
 
-        <div class="publication-card" data-id="3">
-          <div class="card-preview">
-            <h3>Distributed non-disclosive validation of predictive models...</h3>
-            <p class="preview-text">Modified ROC-GLM for remote validation</p>
-          </div>
-          <div class="card-content" style="display: none;">
-            <h3>Distributed non-disclosive validation of predictive models by a modified ROC-GLM</h3>
-            <p>- Validate your ML models on remote locations without looking at the data.</p>
-            <p>- Utilizes SDC and Differential privacy to estimate ROC curves.</p>
-            <a href="https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-024-02312-4" target="_blank" class="external-link">View Paper</a>
-          </div>
-        </div>
+      <article class="card pub glow" tabindex="0" role="button" aria-haspopup="dialog">
+        <span class="label">2024 &middot; Biometrical Journal</span>
+        <h2>A Bayesian hierarchical approach to account for evidence...</h2>
+        <p>COVID-19 modeling with uncertainty</p>
+        <span class="label more">Details &rarr;</span>
+        <template>
+          <span class="label">2024 &middot; Biometrical Journal</span>
+          <h2>A Bayesian hierarchical approach to account for evidence and uncertainty in the modeling of infectious diseases: An application to COVID-19</h2>
+          <ul>
+            <li>Combine the signal from different uncertain sources to get a reliable estimate of latent variables.</li>
+            <li>Incorporates uncertainty of possibly contradicting data sources.</li>
+            <li>Estimates disease dynamics to infer NPIs effects during COVID.</li>
+            <li>Data of 20 European countries.</li>
+          </ul>
+          <a href="https://onlinelibrary.wiley.com/doi/10.1002/bimj.202200341" target="_blank" rel="noopener" class="btn">View Paper</a>
+        </template>
+      </article>
 
-        <div class="publication-card" data-id="4">
-          <div class="card-preview">
-            <h3>A Bayesian hierarchical approach to account for evidence...</h3>
-            <p class="preview-text">COVID-19 modeling with uncertainty</p>
-          </div>
-          <div class="card-content" style="display: none;">
-            <h3>A Bayesian hierarchical approach to account for evidence and uncertainty in the modeling of infectious diseases: An application to COVID-19</h3>
-            <p>- Combine the signal from different uncertain sources to get a reliable estimate of latent variables.</p>
-            <p>- Incorporates uncertainty of possibly contradicting data sources.</p>
-            <p>- Estimates disease dynamics to infer NPIs effects during COVID.</p>
-            <p>- Data of 20 European countries.</p>
-            <a href="https://onlinelibrary.wiley.com/doi/10.1002/bimj.202200341" target="_blank" class="external-link">View Paper</a>
-          </div>
-        </div>
+      <article class="card pub glow" tabindex="0" role="button" aria-haspopup="dialog">
+        <span class="label">2023 &middot; Scientific Reports</span>
+        <h2>Using a Bayesian hierarchical approach to study...</h2>
+        <p>NPIs effects on COVID-19 in Germany</p>
+        <span class="label more">Details &rarr;</span>
+        <template>
+          <span class="label">2023 &middot; Scientific Reports</span>
+          <h2>Using a Bayesian hierarchical approach to study the association between non-pharmaceutical interventions and the spread of Covid-19 in Germany</h2>
+          <ul>
+            <li>An application of the methodology from above on German federal state level data.</li>
+            <li>Some modifications.</li>
+            <li>A lot of different NPIs were estimated.</li>
+          </ul>
+          <a href="https://www.nature.com/articles/s41598-023-45950-2" target="_blank" rel="noopener" class="btn">View Paper</a>
+        </template>
+      </article>
 
-        <div class="publication-card" data-id="5">
-          <div class="card-preview">
-            <h3>Using a Bayesian hierarchical approach to study...</h3>
-            <p class="preview-text">NPIs effects on COVID-19 in Germany</p>
-          </div>
-          <div class="card-content" style="display: none;">
-            <h3>Using a Bayesian hierarchical approach to study the association between non-pharmaceutical interventions and the spread of Covid-19 in Germany</h3>
-            <p>- An application of the methodology from above on German federal state level data.</p>
-            <p>- Some modifications.</p>
-            <p>- A lot of different NPIs were estimated.</p>
-            <a href="https://www.nature.com/articles/s41598-023-45950-2" target="_blank" class="external-link">View Paper</a>
-          </div>
-        </div>
+      <article class="card pub glow" tabindex="0" role="button" aria-haspopup="dialog">
+        <span class="label">2023 &middot; Dtsch Arztebl Int</span>
+        <h2>Colorectal Cancer Screening for Persons With...</h2>
+        <p>FARKOR program evaluation</p>
+        <span class="label more">Details &rarr;</span>
+        <template>
+          <span class="label">2023 &middot; Deutsches Ärzteblatt International</span>
+          <h2>Colorectal Cancer Screening for Persons With a Positive Family History</h2>
+          <ul>
+            <li>Evaluation and statistical analysis of the FARKOR program.</li>
+            <li>Analysis of detection rates of colorectal cancer in persons Aged 25 to 50.</li>
+            <li>You may want to look at <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/ijc.34747" target="_blank" rel="noopener">this</a> affiliated publication about benefits and harms of screenings.</li>
+          </ul>
+          <a href="https://www.aerzteblatt.de/int/archive/article/235249" target="_blank" rel="noopener" class="btn">View Paper</a>
+        </template>
+      </article>
 
-        <div class="publication-card" data-id="6">
-          <div class="card-preview">
-            <h3>Colorectal Cancer Screening for Persons With...</h3>
-            <p class="preview-text">FARKOR program evaluation</p>
-          </div>
-          <div class="card-content" style="display: none;">
-            <h3>Colorectal Cancer Screening for Persons With a Positive Family History</h3>
-            <p>- Evaluation and statistical analysis of the FARKOR program.</p>
-            <p>- Analysis of detection rates of colorectal cancer in persons Aged 25 to 50.</p>
-            <p>- You may want to look at <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/ijc.34747" target="_blank">this</a> affiliated publication about benefits and harms of screenings.</p>
-            <a href="https://www.aerzteblatt.de/int/archive/article/235249" target="_blank" class="external-link">View Paper</a>
-          </div>
-        </div>
+    </div>
 
+    <h2 class="section-title">Further recent collaborations</h2>
+    <section class="card">
+      <div class="block">
+        <span class="label">2026 &middot; IEEE Access</span>
+        <p><a href="https://doi.org/10.1109/ACCESS.2026.3672991" target="_blank" rel="noopener">An Exploratory Survey Study Toward a Conceptual Framework for Structuring the Integration of Privacy-Enhancing Technologies in Federated Learning and Analytics</a></p>
       </div>
-        
-        <footer>Raphael Rehms &copy; 2026</footer>
-
-    </div>
-
-    <!-- Modal Overlay -->
-    <div id="modal-overlay" class="modal-overlay">
-      <div class="modal-content">
-        <button class="modal-close" id="modal-close">&times;</button>
-        <div id="modal-body"></div>
+      <div class="block">
+        <span class="label">2026 &middot; Nature</span>
+        <p><a href="https://doi.org/10.1038/s41586-025-09844-9" target="_blank" rel="noopener">Investigating the analytical robustness of the social and behavioural sciences</a></p>
       </div>
+      <div class="block">
+        <span class="label">2025 &middot; PLOS One</span>
+        <p><a href="https://doi.org/10.1371/journal.pone.0337893" target="_blank" rel="noopener">Individual-level surrogacy of MRI lesions for disease severity in RRMS: Methods to quantify predictive power and their application to longitudinal data from recent trials</a></p>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="pub-dialog" class="modal" aria-label="Publication details">
+    <div class="modal-inner">
+      <button class="modal-close" type="button" aria-label="Close">&times;</button>
+      <div class="modal-body"></div>
     </div>
+  </dialog>
 
-    <div class="back-button-container">
-        <h2><a href="../index.html">Go back</a></h2>
-    </div>
+  <footer class="footer">Raphael Rehms &copy; 2026 &#8213; <a href="legal.html">Legal</a></footer>
 
-  
-        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-        <script>
-          particlesJS.load('particles-js', 'particles.json', function(){
-            console.log('particles.json loaded...');
-          });
-        </script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/site.js"></script>
 </body>
-<script src="particles.js"></script>
-<script src="../config/app.js"></script>
-
-<!-- Research Page JavaScript -->
-<script>
-// Modal functionality
-class PublicationModal {
-  constructor() {
-    this.modal = document.getElementById('modal-overlay');
-    this.modalBody = document.getElementById('modal-body');
-    this.closeBtn = document.getElementById('modal-close');
-    this.cards = document.querySelectorAll('.publication-card');
-    
-    this.init();
-  }
-  
-  init() {
-    // Add click handlers to cards
-    this.cards.forEach(card => {
-      card.addEventListener('click', (e) => {
-        // Don't open modal if clicking on external link
-        if (e.target.classList.contains('external-link')) {
-          return;
-        }
-        this.openModal(card);
-      });
-    });
-    
-    // Close modal handlers
-    this.closeBtn.addEventListener('click', () => this.closeModal());
-    this.modal.addEventListener('click', (e) => {
-      if (e.target === this.modal) {
-        this.closeModal();
-      }
-    });
-    
-    // Escape key to close
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && this.modal.classList.contains('active')) {
-        this.closeModal();
-      }
-    });
-  }
-  
-  openModal(card) {
-    const content = card.querySelector('.card-content').cloneNode(true);
-    content.style.display = 'block';
-    
-    this.modalBody.innerHTML = '';
-    this.modalBody.appendChild(content);
-    
-    this.modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-  
-  closeModal() {
-    this.modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-}
-
-// Responsive grid management
-class ResponsiveGrid {
-  constructor() {
-    this.grid = document.querySelector('.publications-grid');
-    this.cards = document.querySelectorAll('.publication-card');
-    this.currentBreakpoint = this.getBreakpoint();
-    
-    this.init();
-  }
-  
-  init() {
-    // Handle window resize
-    window.addEventListener('resize', () => {
-      const newBreakpoint = this.getBreakpoint();
-      if (newBreakpoint !== this.currentBreakpoint) {
-        this.currentBreakpoint = newBreakpoint;
-        this.adjustLayout();
-      }
-    });
-    
-    // Initial layout adjustment
-    this.adjustLayout();
-  }
-  
-  getBreakpoint() {
-    const width = window.innerWidth;
-    if (width >= 1200) return 'desktop';
-    if (width >= 768) return 'tablet';
-    return 'mobile';
-  }
-  
-  adjustLayout() {
-    // Reset any inline styles
-    this.cards.forEach(card => {
-      card.style.minHeight = '';
-    });
-    
-    // Equalize card heights based on breakpoint
-    if (this.currentBreakpoint === 'desktop') {
-      this.equalizeHeights(3); // 3 columns
-    } else if (this.currentBreakpoint === 'tablet') {
-      this.equalizeHeights(2); // 2 columns
-    }
-    // Mobile doesn't need height equalization
-  }
-  
-  equalizeHeights(columns) {
-    const rows = Math.ceil(this.cards.length / columns);
-    
-    for (let row = 0; row < rows; row++) {
-      const rowCards = Array.from(this.cards).slice(
-        row * columns, 
-        (row + 1) * columns
-      );
-      
-      // Find max height in this row
-      const maxHeight = Math.max(
-        ...rowCards.map(card => card.offsetHeight)
-      );
-      
-      // Apply max height to all cards in this row
-      rowCards.forEach(card => {
-        card.style.minHeight = `${maxHeight}px`;
-      });
-    }
-  }
-}
-
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  new PublicationModal();
-  new ResponsiveGrid();
-});
-</script>
-
 </html>

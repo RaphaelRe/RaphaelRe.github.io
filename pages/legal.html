@@ -1,91 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="height=device-height, initial-scale=1, user-scalable=yes">
-  <title>Resume</title>
-  <link href="../style.css" rel="stylesheet" type="text/css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal | Raphael Rehms</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,6 88,28 88,72 50,94 12,72 12,28' fill='%23b19cd9'/%3E%3C/svg%3E">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t?t==='light':matchMedia('(prefers-color-scheme: light)').matches)document.documentElement.dataset.theme='light'})()</script>
+  <link href="../style.css" rel="stylesheet">
 </head>
+
 <body>
-  <div id="particles-js"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
 
+  <header class="topnav">
+    <a class="brand" href="../index.html" aria-label="Home">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 88,28 88,72 50,94 12,72 12,28"/></svg>
+      <span>Raphael Rehms</span>
+    </a>
+    <nav aria-label="Main" lang="en">
+      <a href="about_me.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="resume.html">Resume</a>
+      <a href="teaching.html">Teaching</a>
+    </nav>
+    <button class="theme-toggle" type="button" lang="en" role="switch" aria-checked="false" aria-label="Light theme" title="Light / dark">
+      <span class="knob" aria-hidden="true">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5a8.5 8.5 0 1 0 10.6 10.6z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      </span>
+    </button>
+  </header>
 
-    <div class="myclass">
-	        <div class="white-box" id="style-1">
+  <main class="page rise">
+    <h1 class="page-title">Impressum &amp; Datenschutz</h1>
 
-      <h1>Impressum & Datenschutz</h1>
-      Inhaltlich verantwortlich und vertretungsberechtigt: <br>
+    <section class="card prose">
+      <h2>Impressum</h2>
+      <p>Angaben gemäß § 18 Abs. 1 Medienstaatsvertrag (MStV):</p>
+      <p>
+        Raphael Rehms<br>
+        Technische Universität München / Klinikum Rechts der Isar<br>
+        Lehrstuhl für Artificial Intelligence in Medicine and Healthcare<br>
+        TranslaTUM<br>
+        Einsteinstraße 25<br>
+        81675 München<br>
+      </p>
+      <p>E-Mail: <a href="#" data-mail-user="raphael.rehms" data-mail-domain="tum.de">raphael.rehms [at] tum.de</a></p>
+      <p>Dies ist meine persönliche, nicht kommerzielle Website. Sie ist kein Angebot der Technischen Universität München.</p>
+    </section>
 
-		Raphael Rehms<br>
-		Am Schwimmbad 3<br>
-		85356 Freising<br>
-		Mail s. Main page<br>
+    <section class="card prose">
+      <h2>Datenschutzerklärung</h2>
 
-		<h1>Datenschutz </h1>
-		Diese Website benutzt keine Tracker, Cookies, Newsletter, Kontaktformulare, externe Schriftbibliotheken oder externe Frameworks.
+      <h3>Verantwortlicher</h3>
+      <p>Verantwortlich für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die im Impressum genannte Person.</p>
 
-Einzig der Server benötigt für die technische Bereitstellung der Seite - sowie die erstellung von Logfiles - grundlegende technische Daten. Diese Daten werden nicht für Marketingzwecke genutzt und zügig automatisch verfremdet.
+      <h3>Kurz zusammengefasst</h3>
+      <p>Diese Website setzt keine Cookies, verwendet keine Analyse- oder Tracking-Werkzeuge, hat kein Kontaktformular und lädt keine Inhalte von Drittanbietern (etwa Schriftarten, Skripte oder Videos). Alle Dateien werden direkt vom Hosting-Anbieter GitHub ausgeliefert.</p>
+    </section>
 
-Die obligatorischen ausführlicheren Informationen hierzu gib es im Folgenden: Bereitstellung der Website und Erstellung von Logfiles Umfang der Datenverarbeitung. <br>
-Bei jedem Aufruf dieser Website erfasst der Server automatisiert Daten und Informationen über den ausrufenden Computer. Folgende Daten werden hierbei erhoben:
+    <section class="card prose">
+      <h2>Hosting durch GitHub Pages</h2>
+      <p>Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.</p>
+      <p>Beim Aufruf der Website verarbeitet GitHub die Daten, die für die Auslieferung technisch notwendig sind. Dazu gehören insbesondere Ihre IP-Adresse sowie Angaben, die Ihr Browser bei jeder Anfrage übermittelt, etwa die aufgerufene Seite, Datum und Uhrzeit, Browsertyp und Betriebssystem und die zuvor besuchte Seite. Nach Angaben von GitHub wird die IP-Adresse aus Sicherheitsgründen protokolliert und gespeichert. Ich selbst erhalte keine Zugriffsprotokolle und keine Besucherstatistiken.</p>
+      <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse liegt in der sicheren und zuverlässigen Bereitstellung dieser Website.</p>
+      <p>Dabei können Daten in die USA übermittelt werden. GitHub ist nach dem EU-US Data Privacy Framework zertifiziert, für das ein Angemessenheitsbeschluss der EU-Kommission besteht (Art. 45 DSGVO). Ergänzend stützt sich GitHub auf die Standardvertragsklauseln der EU-Kommission (Art. 46 Abs. 2 lit. c DSGVO).</p>
+      <p>Wie lange GitHub diese Daten speichert, legt GitHub fest. Näheres finden Sie in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a>.</p>
+    </section>
 
-    Browsertyp/-version,
-    Verwendetes Betriebssystem,
-    Referrer URL (die zuvor besuchte Seite),
-    Hostname des zugreifenden Rechners (IP-Adresse),
-    Uhrzeit der Serveranfrage,
-    URL, die vom System des Nutzers über unsere Website aufgerufen wird <br>
+    <section class="card prose">
+      <h2>Speicherung im Browser</h2>
+      <p>Wenn Sie mit dem Schalter oben rechts zwischen hellem und dunklem Farbschema wechseln, wird Ihre Wahl (»light« oder »dark«) im lokalen Speicher (localStorage) Ihres Browsers abgelegt, damit sie beim nächsten Besuch erhalten bleibt. Dieser Eintrag wird weder an mich noch an Dritte übermittelt und lässt sich jederzeit über die Einstellungen Ihres Browsers löschen.</p>
+      <p>Solange Sie den Schalter nicht benutzen, richtet sich das Farbschema nach der Einstellung Ihres Betriebssystems; dabei wird nichts gespeichert. Darüber hinaus legt diese Website keine Informationen in Ihrem Browser ab.</p>
+      <p>Rechtsgrundlage ist § 25 Abs. 2 Nr. 2 TDDDG: Die Speicherung ist unbedingt erforderlich, um die von Ihnen ausdrücklich gewünschte Einstellung bereitzustellen.</p>
+    </section>
 
-Die Daten werden in den Logfiles meines Systems gespeichert. Diese Daten werden nicht mit anderen personenbezogenen Daten des Nutzers zusammengeführt. Rechtsgrundlage für die Datenverarbeitung
+    <section class="card prose">
+      <h2>Kontakt per E-Mail</h2>
+      <p>Wenn Sie mir eine E-Mail schreiben, verarbeite ich Ihre E-Mail-Adresse und den Inhalt Ihrer Nachricht, um Ihr Anliegen zu beantworten (Art. 6 Abs. 1 lit. f DSGVO). Die Daten werden gelöscht, sobald Ihr Anliegen erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+    </section>
 
-Rechtsgrundlage für die vorübergehende Speicherung der Logfiles und Daten ist Art. 6 Abs. 1 lit. f DSGVO.
-<h1> Zweck der Datenverarbeitung</h1>
-Die kurzfristige Speicherung der IP-Adresse durch das System ist notwendig, um eine Auslieferung der Website an den Computer des Nutzers zu ermöglichen. Hierfür muss die IP-Adresse für die Dauer der Sitzung gespeichert bleiben.<br>
-Die Speicherung in Logfiles erfolgt, um die Funktionsfähigkeit der Website sicherzustellen. Zudem dienen die Daten zur Optimierung der Website und zur Sicherstellung der Sicherheit meiner IT-Systeme. Eine Auswertung der Daten zu Marketingzwecken findet in dabei nicht statt. <br>
-In diesen Zwecken liegt auch mein berechtigtes Interesse an der Datenverarbeitung nach Art. 6 Abs. 1 lit. f DSGVO. Dauer der Speicherung <br>
-Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind. Im Falle der Erfassung der Daten zur Bereitstellung der Website ist dies der Fall, wenn die jeweilige Sitzung beendet ist. <br>
-Im Falle der Speicherung der Daten in Logfiles ist dies nach spätestens sieben Tagen der Fall. Eine darüberhinausgehende Speicherung ist möglich. In diesem Fall werden die IP-Adressen der Nutzer gelöscht oder verfremdet, sodass eine Zuordnung des aufrufenden Clients nicht mehr möglich ist. Widerspruchs- und Beseitigungsmöglichkeit <br>
-Die Erfassung der Daten zur Bereitstellung der Website und die Speicherung der Daten in Logfiles ist für den Betrieb der Internetseite zwingend erforderlich. Es besteht folglich seitens des Nutzers keine Widerspruchsmöglichkeit. <br>
-<h1>Rechte </h1>
-<h1> Auskunftsrecht </h1>
-Ich gebe Ihnen gerne Auskunft über ihre mir vorliegenden persönlichen Daten: Wie diese verarbeitet werden, welche Kategorien diese haben, mit wem ich diese teile, die Kriterien wann ich diese lösche. Recht auf Berichtigung <br>
-Sie haben auch ein Recht auf eine unverzügliche Berichtigung dieser Daten, sofern diese unrichtig oder unvollständig sind. Recht auf Berichtigung <br>
-Es besteht ein Recht auf die Einschränkung der Verarbeitung für die Zeit in der die personenbezogen Daten geprüft werden, diese nicht länger benötigt werden, die Verarbeitung unrechtmäßig ist, aber sie die Löschung ablehnen oder sie noch für die Ausübung von Rechtsansprüchen benötigt werden.<br>
-Diese Daten dürfen fortan – abgesehen von der Speicherung – nur mit ihrer Einwilligung, oder für Rechtsansprüche, zum Schutz anderer juris. oder natürlichen Personen oder aus Gründen eines wichtigen öffentlichen Interesses der Union oder eines Mitgliedstaats verarbeitet werden. Recht auf Löschung <br>
-Sie können verlangen, dass ich ihre personenbezogenen Daten lösche, sofern:
+    <section class="card prose">
+      <h2>Links zu anderen Websites</h2>
+      <p>Diese Website enthält Links zu anderen Angeboten, zum Beispiel zu GitHub, arXiv, Fachverlagen oder der TUM. Erst wenn Sie einen solchen Link anklicken, werden Daten an den jeweiligen Anbieter übertragen. Dafür gelten dessen Datenschutzbestimmungen.</p>
+    </section>
 
-    Sie nicht für den eigentlichen Zweck notwendig sind
-    Sie ihre Einwilligung zur Nutzung wiederufen und es sonst keine Rechtsgrundlage hierzu gibt
-    Keine vorrangigen Gründe für die Verarbeitung vorliegen
-    Die Daten unrechtmäßig genutzt wurden
-    Diese für die Erfüllung rechtlicher Verpflichtungen nach dem Recht der EU (bzw. eines Mitgliedsstaates) es erforderlich macht
+    <section class="card prose">
+      <h2>Ihre Rechte</h2>
+      <p>Sie haben das Recht auf Auskunft über Ihre bei mir gespeicherten Daten (Art. 15 DSGVO), auf Berichtigung (Art. 16 DSGVO), auf Löschung (Art. 17 DSGVO), auf Einschränkung der Verarbeitung (Art. 18 DSGVO) und auf Datenübertragbarkeit (Art. 20 DSGVO). Eine formlose E-Mail an mich genügt. Für die Daten, die GitHub beim Hosting verarbeitet, können Sie sich auch direkt an GitHub wenden.</p>
 
- <h1>Informationen an Dritte </h1>
- Sollten die Daten öffentlich gemacht worden sein und eine Löschung notwendig, so kann unter Berücksichtigung der technischen Möglichkeiten und Kosten angemessene Maßnahmen, auch technischer Art, um mögliche Dritte über die Löschungsnotwendigkeit zu informieren, und etwaige Links bzw. Kopien der personenbezogenen Daten zu zerstören <br>
- Eine Löschungsnotwendigkeit besteht nicht, sofern die Ausübung des Rechts der freien Meinungsäußerung und Information dadurch beeinträchtigt wird. <br>
- Die Verarbeitung im öffentlichen Interesse liegt, beispielsweise für Archivzwecke, wissenschaftliche oder historische Forschungszwecke bzw. statistische Zwecke gem. Art. 89 Abs. 1 DSGVO, soweit dies unter Abschnitt a) genannte Recht voraussichtlich die Verwirklichung der Ziele dieser Verarbeitung unmöglich macht oder ernsthaft beeinträchtigt, oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen. Recht auf Datenübertragbarkeit<br>
- Sie haben das Recht ihre personenbezogenen Daten in einem gängigen Format zu erhalten. Das Recht für Datenübertragbarkeit gilt nicht für personenbezogene Daten, die erforderlich sind zur Wahrung von Aufgaben, die im öffentlichen Interesse liegen, oder aber im Sinne öffentlicher Gewalt liegt, die mir übertragen wurde. Recht auf Beschwerde bei einer Aufsichtsbehörde <br>
- Sie können sich bei einer Aufsichtsbehörde beschweren, sollten Sie der Meinung sein, dass hier ein Verstoß gegen die DSGVO vorliegt.
-		</div>
-        <footer>Raphael Rehms &copy; 2026</footer>
-    </div>
+      <h3>Widerspruchsrecht</h3>
+      <p>Soweit eine Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO beruht, können Sie ihr jederzeit aus Gründen, die sich aus Ihrer besonderen Situation ergeben, widersprechen (Art. 21 DSGVO).</p>
 
-  
-        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+      <h3>Beschwerderecht</h3>
+      <p>Sie können sich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO). Für mich zuständig ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach, <a href="https://www.lda.bayern.de" target="_blank" rel="noopener">www.lda.bayern.de</a>.</p>
 
-        <script>
-          particlesJS.load('particles-js', 'particles.json', function(){
-            console.log('particles.json loaded...');
-          });
-        </script>
+      <p class="label">Stand: November 2026</p>
+    </section>
+  </main>
+
+  <footer class="footer">Raphael Rehms &copy; 2026</footer>
+
+  <script src="../js/particles.js"></script>
+  <script src="../js/site.js"></script>
 </body>
-
-<div class="back-button-container">
-    <h2><a href="../index.html">Go back</a></h2>
-</div>
-
-<script src="particles.js"></script>
-<script src="../config/app.js"></script>
 </html>
-

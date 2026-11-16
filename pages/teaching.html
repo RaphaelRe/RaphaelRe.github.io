@@ -1,111 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="height=device-height, initial-scale=1, user-scalable=yes">
-  <title>Resume</title>
-  <link href="../style.css" rel="stylesheet" type="text/css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teaching | Raphael Rehms</title>
+  <meta name="description" content="Courses and seminars taught by Raphael Rehms.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,6 88,28 88,72 50,94 12,72 12,28' fill='%23b19cd9'/%3E%3C/svg%3E">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t?t==='light':matchMedia('(prefers-color-scheme: light)').matches)document.documentElement.dataset.theme='light'})()</script>
+  <link href="../style.css" rel="stylesheet">
 </head>
+
 <body>
-  <div id="particles-js"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
 
-<div class="sidenav">
-   <a href="../index.html">Main</a>
-   <a href="about_me.html">About</a>
-   <a href="research.html">Research</a>
-   <a href="resume.html">Resume</a>
-</div>
+  <header class="topnav">
+    <a class="brand" href="../index.html" aria-label="Home">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 88,28 88,72 50,94 12,72 12,28"/></svg>
+      <span>Raphael Rehms</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="about_me.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="resume.html">Resume</a>
+      <a href="teaching.html" aria-current="page">Teaching</a>
+    </nav>
+    <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Light theme" title="Light / dark">
+      <span class="knob" aria-hidden="true">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5a8.5 8.5 0 1 0 10.6 10.6z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      </span>
+    </button>
+  </header>
 
-    <div class="textclass2">
-	    <h2>Teaching</h2>	
-
-
-      <div class="white-box" id="style-1">
-
-	      <p style="text-align:center;"> During the last years, I did a lot of teaching and seminars. Here, you can find a non-exhaustive list.</p>
-
-	      <p> <hr> </p>
-	      <p> <hr> </p>
-
-	      <p style="text-align:center;"> R Course for Epidemiologists (Programming course, M.Sc program)</p>
-        <ul>
-          <li> I port the course to quarto right now to have everything at one place (independet of moodle).</li>
-          <li> Material can be found <a href="https://raphaelre.quarto.pub/r-course/"> here </a>. A lot of changes are done right now...</li>
-        </ul>
-
-	      <p> <hr> </p>
-
-	      <p style="text-align:center;">  Probabilistic Machine and Deep Learning / Uncertainty Quantification in Deep Learning (Seminar, M.Sc program)</p>
-        <ul>
-          <li> Past topics I have supervised:</li>
-            <ul>
-              <li> Bayesian Neural Networks </li>
-              <li> MCMC, Stochastic gradient Langevin dynamics, Hamiltonian Monte Carlo </li>
-              <li> Bayes by Backprop and Variational inference</li>
-            </ul>
-        </ul>
-
-	      <p> <hr> </p>
-
-	      <p style="text-align:center;">  Applied Deep learning (Project style course, M.Sc program)</p>
-        <ul>
-          <li> Past topics I supervised:</li>
-            <ul>
-              <li> Implementation of Stein Variational inference in JAX with application to financial data</li>
-              <li> Stein Variational inference in Blackjax: Experiments and extensions.</li>
-            </ul>
-        </ul>
+  <main class="page rise">
+    <h1 class="page-title">Teaching</h1>
+    <p class="lead">During the last years, I did a lot of teaching and seminars. Here, you can find a non-exhaustive list.</p>
 
 
-	      <p> <hr> </p>
+    <section class="card">
+      <h2>Trustworthy AI in Medicine</h2>
+      <span class="label"> Lecture &middot; M.Sc. program</span>
+      <ul>
+        <li>Foundations of Uncertainty Quantification (Epistemic/Aleatoric uncertainty, Bayesian neural networks)</li>
+        <li>Uncertainty Quantification in Practice (Calibration, conformal prediction, OOD & distribution shift, decisions under uncertainty)</li>
+      </ul>
+    </section>
 
-	      <p style="text-align:center;">  Statistical Methods in Epidemiology (Course, M.Sc program)</p>
-        <ul>
-          <li> Course content varied over the years. List of topics:</li>
-            <ul>
-              <li> Causal inference </li>
-              <li> Measurement error </li>
-              <li> Survival analysis </li>
-              <li> Infectious disease modeling </li>
-              <li> Chronic disease modeling </li>
-            </ul>
-        </ul>
+    <section class="card">
+      <h2>Applied Deep Learning in Medicine</h2>
+      <span class="label"> Practical course &middot; M.Sc. program</span>
+      <p>Organizer and supervisor. Past topics I have supervised:</p>
+      <ul>
+        <li>The Value of a Second Modality: Epistemic Uncertainty in Multimodal Medical Image Classification</li>
+        <li>Robustness of Bayesian Deep Learning for Uncertainty Quantification</li>
+      </ul>
+    </section>
 
+    <section class="card">
+      <h2>Probabilistic Machine and Deep Learning / Uncertainty Quantification in Deep Learning</h2>
+      <span class="label">Seminar &middot; M.Sc. program</span>
+      <p>Past topics I have supervised:</p>
+      <ul>
+        <li>Bayesian Neural Networks</li>
+        <li>MCMC, Stochastic gradient Langevin dynamics, Hamiltonian Monte Carlo</li>
+        <li>Bayes by Backprop and Variational inference</li>
+      </ul>
+    </section>
 
-	      <p> <hr> </p>
+    <section class="card">
+      <h2>Applied Deep learning</h2>
+      <span class="label">Project style course &middot; M.Sc. program</span>
+      <p>Past topics I supervised:</p>
+      <ul>
+        <li>Implementation of Stein Variational inference in JAX with application to financial data</li>
+        <li>Stein Variational inference in Blackjax: Experiments and extensions.</li>
+      </ul>
+    </section>
 
+    <section class="card">
+      <h2>Statistical Methods in Epidemiology</h2>
+      <span class="label">Course &middot; M.Sc. program</span>
+      <p>Course content varied over the years. List of topics:</p>
+      <ul>
+        <li>Causal inference</li>
+        <li>Measurement error</li>
+        <li>Survival analysis</li>
+        <li>Infectious disease modeling</li>
+        <li>Chronic disease modeling</li>
+      </ul>
+    </section>
 
-	      <p style="text-align:center;">  Applied Statistics in Epidemiology (Seminar, M.Sc program)</p>
-        <ul>
-          <li> Seminar about statistical methods in Epidemiology. Topics I supervised:</li>
-            <ul>
-              <li> Causal inference </li>
-              <li> Bayesian Clinical trials </li>
-            </ul>
-        </ul>
+    <section class="card">
+      <h2>R Course for Epidemiologists</h2>
+      <span class="label">Programming course &middot; M.Sc. program</span>
+      <ul>
+        <li>I port the course to quarto right now to have everything at one place (independent of moodle).</li>
+        <li>Material can be found <a href="https://raphaelre.quarto.pub/r-course/" target="_blank" rel="noopener">here</a>. A lot of changes are done right now...</li>
+      </ul>
+    </section>
 
+    <section class="card">
+      <h2>Applied Statistics in Epidemiology</h2>
+      <span class="label">Seminar &middot; M.Sc. program</span>
+      <p>Seminar about statistical methods in Epidemiology. Topics I supervised:</p>
+      <ul>
+        <li>Causal inference</li>
+        <li>Bayesian Clinical trials</li>
+      </ul>
+    </section>
+  </main>
 
+  <footer class="footer">Raphael Rehms &copy; 2026 &#8213; <a href="legal.html">Legal</a></footer>
 
-
-    </div>
-
-      <footer>Raphael Rehms &copy; 2024</footer>
-  
-        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-        <script>
-          particlesJS.load('particles-js', 'particles.json', function(){
-            console.log('particles.json loaded...');
-          });
-        </script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/site.js"></script>
 </body>
-
-<div class="back-button-container">
-    <h2><a href="../index.html">Go back</a></h2>
-</div>
-
-<script src="particles.js"></script>
-<script src="../config/app.js"></script>
 </html>
-
